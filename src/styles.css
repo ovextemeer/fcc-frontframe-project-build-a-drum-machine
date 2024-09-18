@@ -1,0 +1,131 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8d8d8d;
+}
+
+.App {
+  font-family: sans-serif;
+  background-color: #b3b3b3;
+  outline: 0.3rem solid orange;
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (orientation: landscape) and (min-width: 992px) {
+  .App {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 991px) {
+  .App {
+    width: 80%;
+    height: 90%;
+  }
+}
+
+.TitleBar {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.Title {
+  margin-right: 0.25rem;
+}
+
+.Controls {
+  flex-grow: 1;
+  display: flex;
+  padding: 0 2rem 2rem 2rem;
+}
+
+@media all and (orientation: landscape) and (min-width: 992px) {
+  .Controls {
+    flex-direction: row;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 991px) {
+  .Controls {
+    flex-direction: column;
+  }
+}
+
+.Keys {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.Adjuster {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+@media all and (orientation: landscape) and (min-width: 992px) {
+  .Keys {
+    margin-right: 0.5rem;
+  }
+
+  .Adjuster {
+    margin-left: 0.5rem;
+  }
+}
+
+@media all and (orientation: portrait) and (max-width: 991px) {
+  .Keys {
+    margin-bottom: 0.5rem;
+  }
+
+  .Adjuster {
+    margin-top: 0.5rem;
+  }
+}
+
+.drum-pad {
+  background-color: grey;
+  border-radius: 0.25rem;
+  box-shadow: 0.25rem 0.25rem 0.25rem black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+.drum-pad:hover {
+  cursor: pointer;
+}
+
+.drum-pad:active {
+  background-color: orange;
+}
+
+#display {
+  width: 100%;
+  height: 30%;
+  background-color: grey;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+}
